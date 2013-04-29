@@ -1,0 +1,33 @@
+ul li.gravity_validation.gverror{
+
+}
+ul li.gravity_validation.gverror input[type="text"],
+ul li.gravity_validation.gverror textarea{
+	background :url('../images/invalid.png') no-repeat center right #F2DEDE;
+	border:1px solid #D8000C;
+}
+
+ul li.gravity_validation.gverror select{
+	background :url('../images/invalid.png') no-repeat center right #F2DEDE;
+	border:1px solid #D8000C;
+}
+
+ul li.gravity_validation.gvsuccess input[type="text"],
+ul li.gravity_validation.gvsuccess textarea{
+	background :url('../images/valid.png') no-repeat center right #DFF2BF;
+	border: 1px solid #4F8A10;
+}
+ul li.gravity_validation.gvsuccess select{
+	background :url('../images/valid.png') no-repeat center right #DFF2BF;
+	border: 1px solid #4F8A10;
+}
+
+p.gverror{
+	color: #D6010E;
+	font-size: 12px;
+}
+
+form .formError .formErrorContent{
+    padding-left:4px;
+    padding-right:4px;
+}
