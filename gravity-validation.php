@@ -2,14 +2,14 @@
 /*
 Plugin Name: Gravity Validation
 Plugin URI: http://example.com/
-Description: Description
+Description: Gravity Validation is a WordPress plugin that works with Gravity Forms to provide inline form validation
 Version: 0.1
-Author: Your Name
+Author: De'Yonte W.
 Author URI: http://example.com/
 */
 
 /**
- * Copyright (c) 2013 Your Name. All rights reserved.
+ * Copyright (c) 2013 De'Yonte W. All rights reserved.
  *
  * Released under the GPL license
  * http://www.opensource.org/licenses/gpl-license.php
@@ -37,7 +37,6 @@ add_action('wp_ajax_nopriv_gravity_validation_ajax','gravity_validation_ajax');
 
 function gravity_validation($form,$is_ajax){
 	if( !empty($form['gf_inline_validation']) ):
-		echo var_dump($form);
 		wp_enqueue_script( 'jquery');
 		$nonce = wp_create_nonce( 'gv' );
 		$form_id = "gform_".$form['id'];
