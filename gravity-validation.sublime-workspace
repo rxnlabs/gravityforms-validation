@@ -1,0 +1,732 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"textarea"
+			],
+			[
+				"err",
+				"errorFound"
+			],
+			[
+				"gv",
+				"gv_call_js"
+			],
+			[
+				"appl",
+				"apply_filters"
+			],
+			[
+				"pos",
+				"post	Post Template"
+			],
+			[
+				"post",
+				"post_type"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"backg",
+				"background-position"
+			],
+			[
+				"has",
+				"hasOwnProperty"
+			],
+			[
+				"for",
+				"formvalidate"
+			],
+			[
+				"form",
+				"formvalidate"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"gravity",
+				"gravity_validation"
+			],
+			[
+				"wp_reg",
+				"wp_register_style"
+			],
+			[
+				"req",
+				"required"
+			],
+			[
+				"is_plu",
+				"is_plugin_active"
+			],
+			[
+				"fb",
+				"fbpop_id"
+			],
+			[
+				"fbpo",
+				"fbpop_id"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"is_nu",
+				"is_numeric"
+			],
+			[
+				"add",
+				"addslashes"
+			],
+			[
+				"wp_enq",
+				"wp_enqueue_script"
+			],
+			[
+				"te",
+				"template_info"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"fo",
+				"found"
+			],
+			[
+				"se",
+				"select"
+			],
+			[
+				"wp_res",
+				"wp_reset_postdata"
+			],
+			[
+				"get_the",
+				"get_the_ID"
+			],
+			[
+				"get_post_cust",
+				"get_post_custom_values"
+			],
+			[
+				"selec",
+				"selected"
+			],
+			[
+				"val",
+				"values"
+			],
+			[
+				"_",
+				"_POST"
+			],
+			[
+				"get_the_t",
+				"get_the_title"
+			],
+			[
+				"on",
+				"only_integers"
+			],
+			[
+				"sele",
+				"selected_posts"
+			],
+			[
+				"comm",
+				"commas"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"all",
+				"all_posts"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"dw",
+				"dw_fb_like_button"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"templa",
+				"templates"
+			],
+			[
+				"templ",
+				"template_names"
+			],
+			[
+				"get_file",
+				"get_file_data"
+			],
+			[
+				"so",
+				"source"
+			],
+			[
+				"OBJ",
+				"OBJECT_K"
+			],
+			[
+				"fbpop",
+				"fbpop_title"
+			],
+			[
+				"pre",
+				"prefix"
+			],
+			[
+				"table",
+				"tablename"
+			],
+			[
+				"tab",
+				"tablename"
+			],
+			[
+				"wp_enque",
+				"wp_enqueue_style"
+			],
+			[
+				"com",
+				"comment	csscomment"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"rig",
+				"right"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"sl_gr",
+				"sl_grids"
+			],
+			[
+				"sl_grid_",
+				"sl_grids_order"
+			],
+			[
+				"sl",
+				"sl_grid"
+			],
+			[
+				"sl_",
+				"sl_grids"
+			],
+			[
+				"preg",
+				"preg_replace"
+			],
+			[
+				"end",
+				"end_temp_grid"
+			],
+			[
+				"esc",
+				"esc_attr"
+			],
+			[
+				"start",
+				"start_temp_grid"
+			],
+			[
+				"sa",
+				"save_grids"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"to",
+				"total_tab_content"
+			],
+			[
+				"ta",
+				"tab_content"
+			],
+			[
+				"c",
+				"content"
+			],
+			[
+				"plugin",
+				"plugins_url"
+			],
+			[
+				"enqueue",
+				"enqueue_css"
+			],
+			[
+				"is_ad",
+				"is_admin"
+			],
+			[
+				"saved",
+				"saved_components"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"save",
+				"saved_components"
+			],
+			[
+				"input",
+				"input_name"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<?php\n/*\nPlugin Name: Gravity Validation\nPlugin URI: http://example.com/\nDescription: Description\nVersion: 0.1\nAuthor: Your Name\nAuthor URI: http://example.com/\n*/\n\n/**\n * Copyright (c) 2013 Your Name. All rights reserved.\n *\n * Released under the GPL license\n * http://www.opensource.org/licenses/gpl-license.php\n *\n * This is an add-on for WordPress\n * http://wordpress.org/\n *\n * **********************************************************************\n * This program is free software; you can redistribute it and/or modify\n * it under the terms of the GNU General Public License as published by\n * the Free Software Foundation; either version 2 of the License, or\n * (at your option) any later version.\n *\n * This program is distributed in the hope that it will be useful,\n * but WITHOUT ANY WARRANTY; without even the implied warranty of\n * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\n * GNU General Public License for more details.\n * **********************************************************************\n */\n\n//add_action('wp_head','gv_load_script');\nadd_action(\"gform_enqueue_scripts\", \"gravity_validation\", 10, 2);\nadd_action('wp_ajax_gravity_validation_ajax','gravity_validation_ajax');\nadd_action('wp_ajax_nopriv_gravity_validation_ajax','gravity_validation_ajax');\n\nfunction gravity_validation($form,$is_ajax){\n	if( !empty($form['gf_inline_validation']) ):\n		wp_enqueue_script( 'jquery');\n		$nonce = wp_create_nonce( 'gv' );\n		$form_id = \"gform_\".$form['id'];\n		add_action('wp_footer','gv_enqueue_scripts');\n		?>\n		<script type=\"text/javascript\">\n		//http://www.htmlgoodies.com/beyond/javascript/article.php/3724571/Using-Multiple-JavaScript-Onload-Functions.htm\n		function gv_addLoadEvent(func) {\n		  var oldonload = window.onload;\n		  if (typeof window.onload != 'function') {\n		    window.onload = func;\n		  } else {\n		    window.onload = function() {\n		      if (oldonload) {\n		        oldonload();\n		      }\n		      func();\n		    }\n		  }\n		}\n\n		function gv_<?php echo $form['id'];?>(){\n			jQuery('form#gform_<?php echo $form[\"id\"];?>').bind('jqv.field.result', function(event, field, errorFound, prompText){\n				var field_container = jQuery(field).parents('li');\n				if( errorFound ){\n					field_container.addClass('gravity_validation gverror');\n\n				}\n				else if(!errorFound){\n					field_container.addClass('gravity_validation gvsuccess');\n				}\n			});\n			<?php\n			//boolean to determine if the form has any required fields\n			$formvalidate = false;\n			foreach( $form[\"fields\"] as $field ):\n				if( $field['isRequired'] ):\n					//validate required field\n					$formvalidate = true;\n				endif;\n			endforeach;\n			if($formvalidate):?>\n				jQuery('form#gform_<?php echo $form[\"id\"];?>').validationEngine();\n				jQuery(window).ready(function(){\n					\n					jQuery('form#gform_<?php echo $form[\"id\"];?> li input, form#gform_<?php echo $form[\"id\"];?> li select, form#gform_<?php echo $form[\"id\"];?> li textarea').each(function(){\n						var field_id = '#'+jQuery(this).attr('id');\n						//alert(field_id);\n						jQuery(field_id).attr('data-validation-engine','validate[required]');\n						jQuery(field_id).attr('data-errormessage','<?php echo (isset($field[\"errorMessage\"])?$field[\"errorMessage\"]:\"This field is required\");?>');\n						jQuery(field_id).attr('data-prompt-position','topRight:5');\n						\n					});\n				});	\n			<?php endif;?>\n\n			jQuery('form#<?php echo $form_id;?> input[type=\"text\"], form#<?php echo $form_id;?> textarea, form#<?php echo $form_id;?> select').on('focus',function(){\n				var field_container = jQuery(this).parents('li.gfield');\n				field_container.removeClass('gravity_validation gverror');\n				field_container.removeClass('gravity_validation gvsuccess');\n				field_container.children('p.gverror').remove();\n			});\n		}\n		gv_addLoadEvent(gv_<?php echo $form['id'];?>);\n		</script>\n		\n	<?php\n	endif;\n}\n\nadd_action(\"gform_field_css_class\", \"gravity_validation_class\", 10, 3);\n\nfunction gravity_validation_class($classes, $field, $form){\n	if( $field['isRequired'] )\n		$classes .= \" validate[required]\";\n\n	return $classes;\n}\n\nfunction gravity_validation_ajax(){\n	check_ajax_referer( 'gv' );\n	$required = $_POST['field_required'];\n	if( $required == \"true\" ):\n		$value = $_POST['field_value'];\n\n		if( empty($value) ):\n			$result = array('type'=>'error');\n		elseif( !empty($value) ):\n			$result = array('type'=>'success');\n		endif;\n\n	elseif( $required == \"false\" ):\n		$result = array('type'=>'success');\n	endif;\n\n	header('Content-Type: application/json');\n	header(\"Cache-Control: no-cache, must-revalidate\");\n	header(\"Expires: Mon, 26 Jul 1997 05:00:00 GMT\");\n	echo json_encode($result);\n	die();\n}\n\n\nfunction gv_enqueue_scripts(){\n	wp_register_style('gravity.validation', plugins_url('css/gravity.validation.css',__FILE__), false, '0.1');\n	wp_enqueue_style('gravity.validation');\n	wp_register_style('jquery.validation.engine', plugins_url('js/jquery.validation.engine/css/validationEngine.jquery.css',__FILE__), false, '2.6.1');\n	wp_enqueue_style('jquery.validation.engine');\n	wp_register_script('jquery.validation.engine', plugins_url('js/jquery.validation.engine/js/jquery.validationEngine.js',__FILE__), array('jquery'), '2.6.1', true );\n	wp_enqueue_script('jquery.validation.engine');\n	wp_register_script('jquery.validation.engine.en', plugins_url('js/jquery.validation.engine/js/languages/jquery.validationEngine-en.js',__FILE__), array('jquery'), '2.6.1', true );\n	wp_enqueue_script('jquery.validation.engine.en');\n}\n\n\nfunction gv_load_script(){\n	\n	?>\n\n<?php\n}\n\n\n\nadd_filter('gform_form_settings', 'gf_inline_validation', 10, 2);\nfunction gf_inline_validation($settings, $form) {\n\n	$gf_inline_validation = rgars($form, 'gf_inline_validation');\n	if( !empty($gf_inline_validation) )\n		$gf_inline_validate = 'checked=\"checked\"';\n	else\n		$gf_inline_validate = null;\n	\n    $settings['Form Options']['gf_inline_validation'] = '\n        <tr>\n            <th>Inline Validation <a href=\"javascript:void(0);\" class=\"tooltip tooltip_form_field_placeholder\" tooltip=\"&lt;h6&gt;Enable Inline Validation &lt;/h6&gt;Validate gravity forms without user submitting form\">(?)</a></th>\n            <td><input value=\"1\" '.$gf_inline_validate.' id=\"gf_inline_validation\" name=\"gf_inline_validation\" type=\"checkbox\"> <label for=\"gf_inline_validation\">Enable inline validation</label></td>\n        </tr>';\n\n    return $settings;\n}\n\n// save your custom form setting\nadd_filter('gform_pre_form_settings_save', 'save_my_custom_form_setting');\nfunction save_my_custom_form_setting($form) {\n\n    $form['gf_inline_validation'] = rgpost('gf_inline_validation');\n    return $form;\n}",
+			"file": "gravity-validation.php",
+			"file_size": 6789,
+			"file_write_time": 130114850200878821,
+			"settings":
+			{
+				"buffer_size": 6603,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/wamp/www/wordpress/wp-content/plugins/gravityforms/form_settings.php",
+			"settings":
+			{
+				"buffer_size": 59152,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/gravity.validation.css",
+			"settings":
+			{
+				"buffer_size": 860,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: Plugin Head"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: comm",
+				"Snippet: Comment - Block style comment"
+			],
+			[
+				"Fet",
+				"Fetch: File"
+			],
+			[
+				"Snippet: com",
+				"Snippet: Comment - Block style comment"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 146.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/wamp/www/wordpress/wp-content/plugins/socpop-socialpopup/admin/socpop-admin.php",
+		"/E/wamp/www/wordpress/wp-content/plugins/socpop-socialpopup/front/socpop-hooks-shortcodes.php",
+		"/E/wamp/www/wordpress/wp-content/plugins/socpop-socialpopup/socpop-class.php",
+		"/E/wamp/www/wordpress/wp-content/themes/twentytwelve/header.php",
+		"/E/wamp/www/wordpress/wp-content/plugins/socpop-socialpopup/front/socpop-front.php",
+		"/E/wamp/www/wordpress/wp-content/plugins/squeeze-leader/squeeze-leader.php",
+		"/E/wamp/www/wordpress/wp-content/themes/twentytwelve/page.php",
+		"/E/wamp/www/wordpress/wp-content/plugins/gravity-validation/gravity-validation.php",
+		"/E/wamp/www/wordpress/wp-content/plugins/gravity-validation/css/gravity.validation.css",
+		"/E/Dropbox-personal/Dropbox/gravity.validation.css",
+		"/E/wamp/www/wordpress/wp-content/plugins/gravity-validation/gravity-validation.sublime-project",
+		"/E/wamp/www/wordpress/wp-content/plugins/fb-pop/fb-pop.php",
+		"/E/wamp/www/wordpress/wp-content/plugins/fb-pop/fbpop-front.php",
+		"/E/wamp/www/wordpress/wp-content/plugins/fb-pop/fbpop-hooks.php",
+		"/E/wamp/www/wordpress/wp-content/themes/twentytwelve/functions.php",
+		"/E/wamp/www/wordpress/wp-content/plugins/fb-pop/templates/facebook-blue/style.css",
+		"/E/wamp/www/wordpress/wp-content/plugins/fb-pop/facebook pop.sublime-project",
+		"/E/wamp/www/wordpress/wp-content/plugins/fb-pop/admin/css/fbpop-admin.css",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/squeeze-leader/squeeze-leader.php",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/fb-pop/js/monster.js",
+		"/C/Users/Nook/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/fb-pop/admin/js/jquery.valueserialize.js",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/fb-pop/fb-pop.php",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/fb-pop/admin/js/fbpop-admin.js",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/fb-pop/fbpop-front.js",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/fb-pop/facebook pop.sublime-project",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-admin/upgrade.php",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-load.php",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/fb-pop/js/bootstrap.transitions.js",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/squeeze-leader/js/boostrap.transitions/bootstrap.transitions.min.js",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/fb-pop/css/bootstrap.modal.css",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/fb-pop/js/bootstrap.modal.js",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/fb-pop/js/colorbox/jquery.colorbox.js",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/squeeze-leader/js/bootstrap.modal/bootstrap.modal.min.css",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/squeeze-leader/js/bootstrap.modal/bootstrap.modal.min.js",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/themes/rxnlabs/header.php",
+		"/C/Users/Nook/AppData/Roaming/Sublime Text 2/Packages/User/csscomment.sublime-snippet",
+		"/C/Users/Nook/AppData/Roaming/Sublime Text 2/Packages/User/wordpressloop.sublime-snippet",
+		"/E/My Documents/Programming/htdocs/pinkanddrink/wp-content/plugins/hello.php",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/skeletongridler/skeletongridler.php",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/squeeze-leader/squeeze-leader-wpeditor.php",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/squeeze-leader/squeeze-leader-shortcodes.php",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/themes/twentytwelve/single-lps.php",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/themes/rxnlabs/single-lps.php",
+		"/C/wamp/bin/apache/Apache2.2.21/conf/extra/httpd-vhosts.conf",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/wamp/bin/apache/Apache2.2.21/conf/httpd.conf",
+		"/C/wamp/logs/apache_error.log",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/squeeze-leader/config.json",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/squeeze-leader/Squeeze Leader.sublime-project",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/gatedcontent/gatedcontent.php",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/plugins/squeeze-leader/css/css/bootstrap.normalize.css",
+		"/E/My Documents/Programming/htdocs/wordpress/wp-content/themes/twentytwelve/single.php",
+		"/C/wamp/www/wordpress/wp-content/themes/habitat/single-lps.php",
+		"/C/Documents and Settings/Derek/Application Data/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Documents and Settings/Derek/Application Data/Sublime Text 2/Packages/User/Pretty JSON.sublime-settings",
+		"/C/Documents and Settings/Derek/Application Data/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/wamp/www/wordpress/wp-content/plugins/ppclps/squeeze-leader.php",
+		"/C/wamp/www/wordpress/wp-content/plugins/squeeze-leader/.gitignore",
+		"/C/Documents and Settings/Derek/Application Data/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Documents and Settings/Derek/Application Data/Sublime Text 2/Packages/User/SFTP.sublime-settings",
+		"/C/Documents and Settings/Derek/Desktop/clients/kenwood/style.css",
+		"/C/Documents and Settings/Derek/Desktop/clients/kenwood/sftp-config.json",
+		"/C/wamp/www/wordpress/wp-content/themes/habitat/sftp-config.json",
+		"/C/Documents and Settings/Derek/Desktop/splat.jpg"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"var_dum",
+			"function gform_tooltip",
+			"gform_tooltip",
+			"<script type=\"text/javascript\">\n	\n	function gv_<?php echo $form['id'];?>(){\n		<?php\n		//boolean to determine if the form has any required fields\n		$formvalidate = false;\n		foreach( $form[\"fields\"] as $field ):\n			if( $field['isRequired'] ):?>\n				//validate required field\n				jQuery('#input_<?php echo $form[\"id\"].\"_\".$field[\"id\"];?>').attr('data-validation-engine','validate[required]');\n				jQuery('#input_<?php echo $form[\"id\"].\"_\".$field[\"id\"];?>').attr('data-errormessage','<?php echo (isset($field[\"errorMessage\"])?$field[\"errorMessage\"]:\"This field is required\");?>');\n				jQuery('#input_<?php echo $form[\"id\"].\"_\".$field[\"id\"];?>').attr('data-prompt-position','topRight:5');\n			<?php\n				$formvalidate = true;\n			endif;\n		endforeach;\n		if($formvalidate):?>\n			jQuery('form#gform_<?php echo $form[\"id\"];?>').validationEngine();\n		<?php endif;?>\n		jQuery('form#<?php echo $form_id;?> input[type=\"text\"], form#<?php echo $form_id;?> textarea, form#<?php echo $form_id;?> select').on('blur',function(){\n			var this_value = jQuery(this).val();\n			var field_container = jQuery(this).parents('li.gfield');\n			var required = field_container.hasClass('gfield_contains_required');\n			jQuery.ajax({\n				type: \"post\",\n				url: \"<?php echo admin_url('admin-ajax.php');?>\",\n				cache: false,\n				data: { action: 'gravity_validation_ajax', field_required: required, field_value: this_value, _ajax_nonce: '<?php echo $nonce; ?>' },\n				dataType: 'json',\n				success: function(result,textStatus,jqXHR){\n					if( result.hasOwnProperty('type') ){\n						if( result.type === 'error' ){\n							field_container.addClass('gravity_validation gverror');\n							if( result.hasOwnProperty('message') ){\n								field_container.append('<p class=\"gverror\">'+result.message+'</p>');\n							}\n						}\n						else if( result.type === 'success' ){\n							field_container.addClass('gravity_validation gvsuccess');\n						}\n					}\n				},\n				error: function(jqXHR,textStatus,errorThrown){\n\n				}\n			});\n		});\n\n		jQuery('form#<?php echo $form_id;?> input[type=\"text\"], form#<?php echo $form_id;?> textarea, form#<?php echo $form_id;?> select').on('focus',function(){\n			var field_container = jQuery(this).parents('li.gfield');\n			field_container.removeClass('gravity_validation gverror');\n			field_container.removeClass('gravity_validation gvsuccess');\n			field_container.children('p.gverror').remove();\n		});\n	}\n	gv_addLoadEvent(gv_<?php echo $form['id'];?>);\n	</script>",
+			"\"",
+			"max_grids",
+			"tweet",
+			"socpop_tracking_tweet",
+			"socpop_tweet",
+			"fbpop_id",
+			"fbpop",
+			"fb_pop",
+			"fbpop",
+			"dimension",
+			"colu",
+			"ajax",
+			"fbpop_ga_show",
+			"fbpop-admin",
+			"fbpop_admin",
+			"butto",
+			"yet",
+			"$count",
+			"$display",
+			"is_int",
+			"values",
+			"fbpop_posts",
+			"fb_pop_templates",
+			"save_components",
+			"save",
+			"add_post_meta_boxes",
+			"subm",
+			"fb_pop",
+			"submenus",
+			"project_m",
+			"face",
+			"vhost",
+			"test",
+			"columnwidth",
+			"sl_grids",
+			"wp",
+			"test",
+			"alert('go",
+			"go",
+			"load_tiny_mce",
+			"$_SESSION['content']",
+			"do_shortcode",
+			"script",
+			"\"url\": \"",
+			"zen",
+			"zend",
+			"jquery",
+			"input_id",
+			"json",
+			"snippet",
+			"<td>",
+			"</td>&nbsp;<td>",
+			"</td> <td>",
+			"</td><td>",
+			"zen",
+			"www",
+			"ftp",
+			"sftp",
+			"curves",
+			"'",
+			"window",
+			"alig",
+			"alignment"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"share",
+			"socpop_tracking_share",
+			"socpop_share",
+			"fbpop_atts",
+			"fbpop",
+			"$_SESSION['sltabcontent']",
+			"parse_shortcode_content",
+			"\"url\": \"js/",
+			"\"url\": \"js",
+			"jQuery",
+			"input_name",
+			"<td class=\"even\">"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "gravity-validation.php",
+					"settings":
+					{
+						"buffer_size": 6603,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3344,
+								3344
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 25.0,
+						"translation.y": 922.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/E/wamp/www/wordpress/wp-content/plugins/gravityforms/form_settings.php",
+					"settings":
+					{
+						"buffer_size": 59152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18111,
+								18130
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6824.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/gravity.validation.css",
+					"settings":
+					{
+						"buffer_size": 860,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								75,
+								88
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 144.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 249.0,
+	"status_bar_visible": true
+}
