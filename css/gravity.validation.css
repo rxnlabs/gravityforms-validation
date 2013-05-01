@@ -1,23 +1,18 @@
-ul li.gravity_validation.gverror{
-
-}
-ul li.gravity_validation.gverror input[type="text"],
-ul li.gravity_validation.gverror textarea{
+.gverror{
 	background :url('../images/invalid.png') no-repeat center right #F2DEDE;
 	border:1px solid #D8000C;
 }
 
-ul li.gravity_validation.gverror select{
+select.gverror{
 	background :url('../images/invalid.png') no-repeat center right #F2DEDE;
 	border:1px solid #D8000C;
 }
 
-ul li.gravity_validation.gvsuccess input[type="text"],
-ul li.gravity_validation.gvsuccess textarea{
+.gvsuccess{
 	background :url('../images/valid.png') no-repeat center right #DFF2BF;
 	border: 1px solid #4F8A10;
 }
-ul li.gravity_validation.gvsuccess select{
+select.gvsuccess{
 	background :url('../images/valid.png') no-repeat center right #DFF2BF;
 	border: 1px solid #4F8A10;
 }
@@ -30,4 +25,9 @@ p.gverror{
 form .formError .formErrorContent{
     padding-left:4px;
     padding-right:4px;
+}
+
+.gform_wrapper ul.gfield_radio li,
+.gform_wrapper ul.gfield_checkbox li {
+	overflow: visible!important;/*fix issue where validation warning doesn't show on radio buttons or checkboxes if Gravity Forms CSS stylesheet is enabled*/;
 }

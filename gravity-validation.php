@@ -59,75 +59,151 @@ function gravity_validation($form,$is_ajax){
 		}
 
 		function gv_<?php echo $form['id'];?>(){
-			jQuery('form#gform_<?php echo $form["id"];?>').bind('jqv.field.result', function(event, field, errorFound, prompText){
-				var field_container = jQuery(field).parents('li:first');
-				if( errorFound ){
-					field_container.addClass('gravity_validation gverror');
+			var special_field_types = ['file','radio','checkbox'];
+			var field_container, field_type, found_field;
+			field_container = field_type = found_field = null;
 
+			jQuery('form#gform_<?php echo $form["id"];?>').bind('jqv.field.result', function(event, field, errorFound, prompText){
+				field_container = jQuery(field).parents('li:first');
+				field_type = jQuery(field).attr('type');
+				found_field = jQuery.inArray(field_type,special_field_types);
+
+				if( errorFound && found_field == -1 ){
+					jQuery(field).addClass('gverror');
 				}
-				else if(!errorFound){
-					field_container.addClass('gravity_validation gvsuccess');
+				else if( errorFound && found_field != -1 ){
+					if( field_type == "radio" ){
+						//field_container = jQuery(field).parentsUntil('form','li');
+						//field_container = jQuery(field).parents('li').eq(1);
+						field_container = jQuery(field).closest('ul');
+						jQuery(field_container).addClass('gverror');
+					}
+					else{
+						field_container = jQuery(field).closest('.ginput_container');
+						jQuery(field_container).addClass('gverror');
+					}
+				}
+				else if( !errorFound && found_field == -1 ){
+					jQuery(field).addClass('gvsuccess');
+				}
+				else if( !errorFound && found_field != -1 ){
+					if( field_type == "radio" ){
+						//field_container = jQuery(field).parentsUntil('form','li');
+						//field_container = jQuery(field).parents('li').eq(1);
+						field_container = jQuery(field).closest('ul');
+						jQuery(field_container).addClass('gvsuccess');
+					}
+					else{
+						field_container = jQuery(field).closest('.ginput_container');
+						jQuery(field_container).addClass('gvsuccess');
+					}
 				}
 			});
 			<?php
 			//boolean to determine if the form has any required fields
 			$formvalidate = false;
-			foreach( $form["fields"] as $field ):
+			foreach( $form["fields"] as $key => $field ):
 				if( $field['isRequired'] ):
-					$regular_types = array('text','textarea','multiselect','select','number','date','time','phone','address','website','email','fileupload','post_title','post_content','post_excerpt','post_image');
+					$formvalidate = true;//set the form for validation once we come across a required field
+
+					$regular_types = array('text','textarea','multiselect','select','number','date','time','phone','website','post_title','post_content','post_excerpt','post_image', 'radio');
 					if( in_array($field['type'], $regular_types) ):
-						$field_id = '#input_'.$form['id'].'_'.$field["id"];
+						$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'"]';
 						?>
 						jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
 						jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
 						jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
-					<?php elseif( $field['type'] == "name" ):
-							if( $field['nameFormat'] == "extended" ):
-								$field_id_pre = '#input_'.$form['id'].'_'.$field['id'].'_2';
-								$field_id_first = '#input_'.$form['id'].'_'.$field['id'].'_3';
-								$field_id_last = '#input_'.$form['id'].'_'.$field['id'].'_6';
-								$field_id_suf = '#input_'.$form['id'].'_'.$field['id'].'_8';
-								?>
-								//prefix
-								jQuery('<?php echo $field_id_pre;?>').attr('data-validation-engine','validate[required]');
-								jQuery('<?php echo $field_id_pre;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
-								jQuery('<?php echo $field_id_pre;?>').attr('data-prompt-position','topRight:5');
-								//first name
-								jQuery('<?php echo $field_id_first;?>').attr('data-validation-engine','validate[required]');
-								jQuery('<?php echo $field_id_first;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
-								jQuery('<?php echo $field_id_first;?>').attr('data-prompt-position','topRight:5');
-								//last name
-								jQuery('<?php echo $field_id_last;?>').attr('data-validation-engine','validate[required]');
-								jQuery('<?php echo $field_id_last;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
-								jQuery('<?php echo $field_id_last;?>').attr('data-prompt-position','topRight:5');
-								//suffix
-								jQuery('<?php echo $field_id_suf;?>').attr('data-validation-engine','validate[required]');
-								jQuery('<?php echo $field_id_suf;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
-								jQuery('<?php echo $field_id_suf;?>').attr('data-prompt-position','topRight:5');
-							<?php elseif( $field['nameFormat'] == "simple" ):
-								$field_id = '#input_'.$form['id'].'_'.$field['id'];
+						<?php
+					elseif( $field['type'] == "name" ):
+						if( $field['nameFormat'] != "simple" ):
+							foreach( $field['inputs'] as $input ):
+								$field_id = $field_id = 'form#'.$form_id.' [name="input_'.$input["id"].'"]';
 								?>
 								//name
 								jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
 								jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
 								jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
-							<?php elseif( empty($field['nameFormat']) ):
-								$field_id_first = '#input_'.$form['id'].'_'.$field['id'].'_3';
-								$field_id_last = '#input_'.$form['id'].'_'.$field['id'].'_6';
-								?>
-								//first name
-								jQuery('<?php echo $field_id_first;?>').attr('data-validation-engine','validate[required]');
-								jQuery('<?php echo $field_id_first;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
-								jQuery('<?php echo $field_id_first;?>').attr('data-prompt-position','topRight:5');
-								//last name
-								jQuery('<?php echo $field_id_last;?>').attr('data-validation-engine','validate[required]');
-								jQuery('<?php echo $field_id_last;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
-								jQuery('<?php echo $field_id_last;?>').attr('data-prompt-position','topRight:5');
-							<?php endif;
-						elseif( $field['type'] == "address" ):						
+								<?php
+							endforeach;
+						else:
+							$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'"]';
+							?>
+							jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
+							jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
+							jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
+							<?php
+						endif;
+					elseif( $field['type'] == "address" ):
+						foreach( $field['inputs'] as $input ):
+							$field_id = $field_id = 'form#'.$form_id.' [name="input_'.$input["id"].'"]';
+							?>
+							//name
+							jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
+							jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
+							jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
+							<?php
+						endforeach;
+					elseif( $field['type'] == "email" ):
+						if( !empty($field['emailConfirmEnabled']) ):
+							$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'"]';
+							$field_id_2 = 'form#'.$form_id.' [name="input_'.$field["id"].'_2"]';
+							?>
+							jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
+							jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
+							jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
+							jQuery('<?php echo $field_id_2;?>').attr('data-validation-engine','validate[required]');
+							jQuery('<?php echo $field_id_2;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
+							jQuery('<?php echo $field_id_2;?>').attr('data-prompt-position','topRight:5');
+							<?php
+						else:
+							$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'"]';
+							?>
+							jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
+							jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
+							jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
+							<?php
+						endif;
+					elseif( $field['type'] == "checkbox" ):
+						foreach( $field['inputs'] as $input ):
+							$field_id = $field_id = 'form#'.$form_id.' [name="input_'.$input["id"].'"]';
+							?>
+							//checkbox
+							jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required');
+							jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
+							jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
+							<?php
+						endforeach;
+					elseif( $field['type'] == "list" ):
+						$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'[]"]';
+						?>
+						jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
+						jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
+						jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
+						<?php
+					elseif( $field['type'] == "fileupload" ):
+						$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'"]';
+						?>
+						jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
+						jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
+						jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
+						<?php
+					elseif( $field['type'] == "post_tags" OR $field['type'] == "post_category" ):
+						if( $field['inputType'] != "multiselect" ):
+							$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'"]';
+							?>
+							jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
+							jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
+							jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
+							<?php
+						elseif( $field['inputType'] == "multiselect" ):
+							$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'[]"]';
+							?>
+							jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
+							jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
+							jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
+							<?php
+						endif;
 					endif;
-					//validate required field
-					$formvalidate = true;
 				endif;
 			endforeach;
 			if($formvalidate):?>
@@ -135,10 +211,32 @@ function gravity_validation($form,$is_ajax){
 			<?php endif;?>
 
 			jQuery('form#<?php echo $form_id;?> input[type="text"], form#<?php echo $form_id;?> textarea, form#<?php echo $form_id;?> select').on('focus',function(){
-				var field_container = jQuery(this).parents('li.gfield');
-				field_container.removeClass('gravity_validation gverror');
-				field_container.removeClass('gravity_validation gvsuccess');
-				field_container.children('p.gverror').remove();
+				//field_container = jQuery(this).parents('li.gfield');
+				
+				field_container = jQuery(this).parents('li:first');
+				field_type = jQuery(this).attr('type');
+				found_field = jQuery.inArray(field_type,special_field_types);
+
+				//remove and add the class from the input element itself
+				if( found_field == -1 ){
+					jQuery(this).removeClass('gverror');
+					jQuery(this).removeClass('gvsuccess');
+				}
+				else if( found_field != -1){
+					//remove and add the class from the parent element
+					if( field_type == "radio" ){
+						//field_container = jQuery(field).parentsUntil('form','li');
+						//field_container = jQuery(field).parents('li').eq(1);
+						jQuery(field_container).removeClass('gverror');
+						jQuery(field_container).removeClass('gvsuccess');
+					}
+					else{
+						jQuery(field_container).removeClass('gverror');
+						jQuery(field_container).removeClass('gvsuccess');
+					}
+				}
+				
+				//jQuery(this).children('p.gverror').remove();
 			});
 		}
 		gv_addLoadEvent(gv_<?php echo $form['id'];?>);
@@ -146,7 +244,7 @@ function gravity_validation($form,$is_ajax){
 		
 	<?php
 	endif;
-	echo var_dump($form);
+	echo var_dump($form['fields']);
 }
 
 //add_action("gform_field_css_class", "gravity_validation_class", 10, 3);
@@ -212,11 +310,11 @@ function gf_inline_validation($settings, $form) {
 	else
 		$gf_inline_validate = null;
 	
-    $settings['Form Options']['gf_inline_validation'] = '
+    $settings['Form Options']['gf_inline_validation'] = __('
         <tr>
             <th>Inline Validation <a href="javascript:void(0);" class="tooltip tooltip_form_field_placeholder" tooltip="&lt;h6&gt;Enable Inline Validation &lt;/h6&gt;Validate gravity forms without user submitting form">(?)</a></th>
             <td><input value="1" '.$gf_inline_validate.' id="gf_inline_validation" name="gf_inline_validation" type="checkbox"> <label for="gf_inline_validation">Enable inline validation</label></td>
-        </tr>';
+        </tr>');
 
     return $settings;
 }
