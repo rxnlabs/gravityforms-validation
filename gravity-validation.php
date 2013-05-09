@@ -152,7 +152,7 @@ class GravityValidation{
 					if( $field['isRequired'] ):
 						$formvalidate = true;//set the form for validation once we come across a required field
 
-						$regular_types = array('text','textarea','multiselect','select','number','date','time','phone','website','post_title','post_content','post_excerpt','post_image', 'radio');
+						$regular_types = array('text','textarea','multiselect','select','time','post_title','post_content','post_excerpt','post_image', 'radio');
 						if( in_array($field['type'], $regular_types) ):
 							$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'"]';
 							?>
@@ -166,7 +166,7 @@ class GravityValidation{
 									$field_id = $field_id = 'form#'.$form_id.' [name="input_'.$input["id"].'"]';
 									?>
 									//name
-									jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
+									jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[custom[phone]]');
 									jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
 									jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
 									<?php
@@ -179,6 +179,27 @@ class GravityValidation{
 								jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
 								<?php
 							endif;
+						elseif( $field['type'] == "phone" ):
+							$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'"]';
+							?>
+							jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required,custom[phone]]');
+							jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
+							jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
+							<?php
+						elseif( $field['type'] == "number" ):
+							$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'"]';
+							?>
+							jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required,custom[number]]');
+							jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
+							jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
+							<?php
+						elseif( $field['type'] == "website" ):
+							$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'"]';
+							?>
+							jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required,custom[url]]');
+							jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
+							jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
+							<?php
 						elseif( $field['type'] == "address" ):
 							foreach( $field['inputs'] as $input ):
 								$field_id = $field_id = 'form#'.$form_id.' [name="input_'.$input["id"].'"]';
@@ -194,7 +215,7 @@ class GravityValidation{
 								$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'"]';
 								$field_id_2 = 'form#'.$form_id.' [name="input_'.$field["id"].'_2"]';
 								?>
-								jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
+								jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required,custom[email]]');
 								jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
 								jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
 								jQuery('<?php echo $field_id_2;?>').attr('data-validation-engine','validate[required]');
@@ -204,7 +225,7 @@ class GravityValidation{
 							else:
 								$field_id = 'form#'.$form_id.' [name="input_'.$field["id"].'"]';
 								?>
-								jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
+								jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required,custom[email]]');
 								jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
 								jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
 								<?php
