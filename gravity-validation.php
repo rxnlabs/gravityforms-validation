@@ -86,7 +86,6 @@ class GravityValidation{
 			wp_enqueue_script( 'jquery');
 			$nonce = wp_create_nonce( 'gv' );
 			$form_id = "gform_".$form['id'];
-			add_action('wp_footer','gv_enqueue_scripts');
 			?>
 			<script type="text/javascript">
 			//http://www.htmlgoodies.com/beyond/javascript/article.php/3724571/Using-Multiple-JavaScript-Onload-Functions.htm
