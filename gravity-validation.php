@@ -165,7 +165,7 @@ class GravityValidation{
 									$field_id = $field_id = 'form#'.$form_id.' [name="input_'.$input["id"].'"]';
 									?>
 									//name
-									jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[custom[phone]]');
+									jQuery('<?php echo $field_id;?>').attr('data-validation-engine','validate[required]');
 									jQuery('<?php echo $field_id;?>').attr('data-errormessage','<?php echo (isset($field["errorMessage"])?$field["errorMessage"]:"This field is required");?>');
 									jQuery('<?php echo $field_id;?>').attr('data-prompt-position','topRight:5');
 									<?php
